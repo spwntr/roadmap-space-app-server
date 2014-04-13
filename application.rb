@@ -24,8 +24,8 @@ end
 
 get '/missions' do
   content_type :json
-  [Nasa.new.get_missions + Esa.new.get_missions].to_json
 end
-get '/missions/nasa' do 
-  Nasa.new.get_missions.to_json
+get '/missions/nasa' do
+  content_type :json 
+  Nasa.new.get_missions
 end
