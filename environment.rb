@@ -5,7 +5,7 @@ require 'sinatra' unless defined?(Sinatra)
 
 configure do
   SiteConfig = OpenStruct.new(
-                 :title => 'Road Map Space Application',
+                 :title => 'Road Map Space Server Application',
                  :author => 'DKL',
                  :url_base => 'http://localhost:4567/'
                )
