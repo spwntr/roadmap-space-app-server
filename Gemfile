@@ -7,7 +7,9 @@ gem 'nokogiri'
 gem "thin"
 gem 'memcachier'
 gem 'dalli'
-
+group :development do
+  gem 'pry-debugger'
+end
 group :test do
   gem 'rspec', :require => 'spec'
   gem 'rack-test'
