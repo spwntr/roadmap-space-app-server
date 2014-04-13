@@ -4,6 +4,7 @@ gem 'rake'
 gem 'haml'
 gem "activemodel"
 gem 'nokogiri'
+
 group :test do
   gem 'rspec', :require => 'spec'
   gem 'rack-test'

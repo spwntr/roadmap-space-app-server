@@ -25,6 +25,7 @@ end
 get '/missions' do
   content_type :json
 end
+
 get '/missions/nasa' do
   content_type :json 
   Nasa.new.get_missions
