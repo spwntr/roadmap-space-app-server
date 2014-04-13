@@ -14,13 +14,13 @@ class Mission
   end
   
   def to_json
-    {'title'=> @title,
+    {'mission' => {'title'=> @title,
      'url'=> @url, 
      'summary'=> @summary, 
      'description'=> @description, 
      'date'=> @date,
      'image' => @image
 
-    }.to_json
+    }}.to_json
   end
 end
