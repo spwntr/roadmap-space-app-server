@@ -22,6 +22,10 @@ get '/' do
   haml :root
 end
 
-get '/hi' do
-json :hi, :format=> json
+get '/missions' do
+  content_type :json
+end
+get '/missions/nasa' do
+  content_type :json 
+  Nasa.new.get_missions
 end
