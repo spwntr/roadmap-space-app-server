@@ -2,7 +2,7 @@ require 'space_agency_site'
 
 class Nasa < SpaceAgencySite 
   def initialize 
-    super 'http://www.nasa.gov/ws/latest_events.jsonp?format_output=1&display_id=page_1&Calendars=6089&Collections=6171&andor=1&start=Sat%20Apr%2012%202014' 
+    super 'http://www.nasa.gov/ws/latest_events.jsonp'#?format_output=1&display_id=page_1&Calendars=6089&Collections=6171&andor=1&start=Sat%20Apr%2012%202013' 
   end
   
   def get_missions
@@ -25,7 +25,7 @@ class Nasa < SpaceAgencySite
                               :url=>node["links"][0],
                               :description=>node["description"],
                               :date=>{:start => node["start"], :end => node["end"]},
-                              :image => node["master_image"]
+                              :image => "www.nasa.gov/#{node["master_image"]}"
                              ).to_json
     end
     missions
