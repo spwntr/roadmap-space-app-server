@@ -4,6 +4,9 @@ gem 'rake'
 gem 'haml'
 gem "activemodel"
 gem 'nokogiri'
+gem "thin"
+gem 'memcachier'
+gem 'dalli'
 
 group :test do
   gem 'rspec', :require => 'spec'
