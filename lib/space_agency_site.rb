@@ -1,6 +1,4 @@
 class SpaceAgencySite < Scraper
-  attr :missions, :url
-  
   def initialize url
     @url = url 
   end
