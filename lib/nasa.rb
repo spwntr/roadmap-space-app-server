@@ -24,8 +24,8 @@ class Nasa < SpaceAgencySite
       missions << Mission.new(:title=>node["title"],
                               :url=>node["links"][0],
                               :description=>node["description"],
-                              :date=>{:start => node["start"], :end => node["end"]}
-
+                              :date=>{:start => node["start"], :end => node["end"]},
+                              :image => node["master_image"]
                              ).to_json
     end
     missions
