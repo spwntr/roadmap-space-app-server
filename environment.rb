@@ -6,7 +6,6 @@ require 'bundler/setup'
 #require 'dm-aggregates'
 #require 'dm-migrations'
 require 'haml'
-
 require 'sinatra' unless defined?(Sinatra)
 
 configure do
