@@ -1,7 +1,10 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'haml'
+require 'dalli'
 require 'sinatra' unless defined?(Sinatra)
+
+set :cache, Dalli::Client.new
 
 configure do
   SiteConfig = OpenStruct.new(
