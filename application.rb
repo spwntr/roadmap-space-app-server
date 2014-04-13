@@ -31,5 +31,5 @@ end
 
 get '/missions/nasa' do
   content_type :json 
-  "{\"missions\": #{Nasa.new.get_missions}}"
+  "{\"missions\": #{Nasa.new.get_missions.to_json}}"
 end

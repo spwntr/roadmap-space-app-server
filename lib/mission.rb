@@ -13,14 +13,13 @@ class Mission
 
   end
   
-  def to_json
-    {'mission' => {'title'=> @title,
+  def to_hash
+    {'title'=> @title,
      'url'=> @url, 
      'summary'=> @summary, 
      'description'=> @description, 
      'date'=> @date,
      'image' => @image
-
-    }}.to_json
+    }
   end
 end

@@ -26,7 +26,7 @@ class Nasa < SpaceAgencySite
                               :description=>node["description"],
                               :date=>{:start => node["start"], :end => node["end"]},
                               :image => "www.nasa.gov/#{node["master_image"]}"
-                             ).to_json
+                             ).to_hash
     end
     missions
   end
