@@ -15,7 +15,7 @@ class Nasa < SpaceAgencySite
   def convert_to_mission_model data
     missions = []
     data["nodes"].each do |el|
-      missions = Mission.new :title=>el["node"]["title"]
+      missions << Mission.new(:title=>el["node"]["title"])
     end
     missions
   end
