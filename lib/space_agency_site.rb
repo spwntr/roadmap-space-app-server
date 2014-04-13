@@ -1,3 +1,5 @@
+require 'scraper'
+
 class SpaceAgencySite < Scraper
   attr :missions, :url
   

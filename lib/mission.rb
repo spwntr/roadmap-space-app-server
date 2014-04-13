@@ -1,6 +1,8 @@
 require 'json'
+
 class Mission 
   attr_accessor :attributes, :title, :url, :summary, :description, :date
+  
   def initialize attributes
     @title = attributes[:title] || ""
     @url = attributes[:url] || ""
@@ -17,5 +19,4 @@ class Mission
      'date'=> @date
     }.to_json
   end
-
 end
