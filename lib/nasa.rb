@@ -25,7 +25,7 @@ class Nasa < SpaceAgencySite
                               :url=>node["links"][0],
                               :description=>node["description"],
                               :date=>{:start => node["start"], :end => node["end"]},
-                              :image => "www.nasa.gov#{node["master_image"]}"
+                              :image => node["master_image"] =! "" ? "www.nasa.gov#{node["master_image"]}" : ""
                              ).to_hash
     end
     missions
