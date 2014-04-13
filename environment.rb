@@ -2,7 +2,6 @@ require 'rubygems'
 require 'bundler/setup'
 require 'haml'
 require 'dalli'
-require 'pry-debugger'
 require 'sinatra' unless defined?(Sinatra)
 
 set :cache, Dalli::Client.new
