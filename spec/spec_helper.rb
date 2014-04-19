@@ -1,15 +1,15 @@
-require 'rubygems'
-require 'bundler'
-Bundler.setup(:default, :test)
-require 'sinatra'
+ENV['RACK_ENV'] = 'test'
+
+# Load the app
+require_relative '../config/boot'
+
 require 'rspec'
 require 'rack/test'
 
-# set test environment
-Sinatra::Base.set :environment, :test
-Sinatra::Base.set :run, false
-Sinatra::Base.set :raise_errors, true
-Sinatra::Base.set :logging, false
+RSpec.configure do |conf|
+  conf.include Rack::Test::Methods
+end
 
-require File.join(File.dirname(__FILE__), '../application')
-
+def app
+  Bookmailist
+end
