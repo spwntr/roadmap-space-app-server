@@ -34,3 +34,6 @@ get '/missions/nasa' do
   "{\"missions\": #{Nasa.new.get_missions.to_json}}"
 end
 
+get '/push_notification' do
+  PushNotification.new.send_push(@existing_registration_ids =[])
+end
