@@ -8,6 +8,7 @@ gem 'nokogiri'
 gem "thin"
 gem 'memcachier'
 gem 'dalli'
+gem 'faraday'
 group :development do
   gem 'pry-debugger'
 end
